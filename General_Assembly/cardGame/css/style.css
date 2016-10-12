@@ -1,0 +1,59 @@
+.board {
+	height: 50%;
+	width: 50%;
+	display: inline-block;
+}
+.cards {
+	height: 200px;
+	width: 150px;
+	background-color: rgb(255,255,0);
+	border: 1px solid rgb(0,0,0);
+	border-radius: 10px;
+	float: left;
+	margin: 8%;
+}
+
+h1 {
+	color: rgb(2, 132, 130);
+	text-align: center;
+}
+
+h2 {
+	color: #ffd700;
+	text-align: center;
+}
+
+p {
+
+	text-align: center;
+}
+
+footer {
+	background: #808080;
+}
+nav a {
+	background: #ffbf00;
+	float: left;
+}
+
+a:hover {
+	background: #ee5f3c;
+}
+a {
+
+	display: block:
+	
+	color: white;
+	padding: 35px;
+}
+.clearfix:after {
+        visibility: hidden;
+        display: block;
+        content: " ";
+        clear: both;
+        height: 0;
+        font-size: 0;
+      }
+nav {
+	background: #808080;
+}

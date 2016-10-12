@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <title>Anna Dowlin</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("https://s16.postimg.org/uh06hozxx/Mission_de_Flores_Flower_Shop.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: helvetica;
+    }
+    p {
+      font-size: 22px;
+      background-color: rgba(0, 0, 0, .75);
+      max-width: 350px;
+      margin: 5px auto 0 ;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 50px 0 0 0;
+      display: block;
+      max-width: 350px;
+      margin: 150px auto 0;
+      background-color: rgba(0, 0, 0, .75);
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+      margin: 0px auto 0;
+      text-align: float left;
+    }
+    input[type="firstrow"] {
+      margin: 4px auto 0;;
+    }
+    input[type="secondrow"] {
+      margin: 4px auto 0;
+    }
+    }
+    input[type="button"] {
+      background: red;
+      color: white;
+      height: 50px;
+      width: 50px;
+      margin: 0 0 30px 0;
+      display: block;
+    }
+    .button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 185px;
+    text-align: center;
+    display: inline;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+#input {
+  max-width: 450px;
+  margin: 0 auto;
+}
+  </style>
+</head>
+<body>
+  <h1>Now we deliver!</h1>
+  <p>Please fill out the below form and we will get in contact!</p>
+  <p><small>Select all that you would like to recieve information on</small><br />
+  <input type="checkbox" name="vehicle1" value="Bike"> Events <input type="checkbox" name="vehicle2" value="Car"> Coupons<br />
+  <input type="checkbox" name="vehicle1" value="Bike"> What's New? <input type="checkbox" name="vehicle2" value="Car"> Exclusives
+
+  </p>
+  <div id="input">
+  <input type="firstrow" name="name" placeholder="First/Last Name Here">
+  <input type="firstrow" name="email" placeholder="Email Here">
+  <input type="secondrow" name="phone" placeholder="Phone Number Here">
+  <input type="secondrow" name="phone" placeholder="Address Here"></p>
+</div>
+  <p id="demo"></p>
+  <button class="button" onclick="buttonClick()">submit</button>
+
+</body>
+<script>
+
+
+function buttonClick() {
+    document.getElementById("demo").innerHTML = "Thank you for your submission! We will be incontact soon.";
+}
+</script>

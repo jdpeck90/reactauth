@@ -1,0 +1,116 @@
+/*******************************************************************************
+Write a function `createExpFunction(pow)` that accepts a positive integer. It returns
+a function which will raise its input to the power specified by `pow` and returns
+the value.
+
+Example 1:
+var powerTwo = createExpFunction(2);
+powerTwo(2); // => 4
+powerTwo(6); // => 36
+
+Example 2:
+var powerThree = createExpFunction(3);
+powerThree(2); // => 8
+powerThree(6); // => 216
+
+Example 3:
+var powerTen = createExpFunction(10);
+powerTen(2); // => 1024
+powerTen(6); // => 60466176
+*******************************************************************************/
+
+function createExpFunction(num) {
+  var sum = 1
+  var powerTwo = function(num2){
+    for(var i = 0; i < num; i++){
+    sum *= num2
+  }
+  return sum
+}
+return powerTwo
+}
+
+var powerTen = createExpFunction(10);
+console.log(powerTen(6));
+/*******************************************************************************
+Write a function mapCreator that takes a callback as an argument
+and returns a new function. The new function should take an array as an argument
+and return a new array, with each element 'mapped' to a new element
+using the original callback.
+
+Example:
+var squareMapper = mapCreator(function (el) {
+  return el * el;
+});
+squareMapper([1, 2, 3, 4]); //=> [1, 4, 9, 16]
+*******************************************************************************/
+
+function mapCreator(callback) {
+
+  var squareMapper = function(array){
+    var selection = [];
+    for(var i =0; i < array.length; i++){
+
+
+    selection.push(callback(array[i]))
+  }
+  return selection
+  }
+  return squareMapper
+}
+
+var squareMapper = mapCreator(function (el) {
+  return el * el;
+});
+
+console.log(squareMapper([1, 2, 3, 4]))
+
+/*******************************************************************************
+Write a function objectSelect, which takes as arguments an object, and a callback,
+and returns a new object where all the key value pairs return true,
+when passed into the callback.
+
+Example:
+var obj = {
+  one: "one",
+  two: "something else",
+  three: "three",
+  four: "another thing."
+};
+var matchingPairs = objectSelect(obj, function (key, val) {
+ return key === val;
+});
+matchingPairs; //=> {
+  one: "one",
+  three: "three"
+}
+*******************************************************************************/
+
+function objectSelect(obj, callback) {
+  var matchPairs = function(obj){
+    var newObj = {}
+    for(var i in obj)
+    if(i === obj[i]){
+      newObj[i] = obj[i]
+    }
+    return newObj
+  }
+  return matchPairs
+}
+
+var obj = {
+  one: "one",
+  two: "something else",
+  three: "three",
+  four: "another thing."
+};
+var matchingPairs = objectSelect(obj, function (key, val) {
+ return key === val;
+});
+
+console.log(matchingPairs(obj))
+/*matchingPairs; //=> {
+  one: "one",
+  three: "three"
+}
+*/

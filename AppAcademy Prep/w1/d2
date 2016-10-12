@@ -1,0 +1,30 @@
+function logBetween(num1, num2){
+  for(var i=num1; i<=num2; i++){
+    console.log(i);
+  }
+}
+
+function fizzBuzz(max){
+  for(var i=0; i<max; i++){
+    if((i%3===0 && i%5!==0)||(i%5===0 && i%3!==0)){
+      console.log(i)
+    }
+  }
+}
+
+function isFactorOf(num,factor){
+  if(num % factor === 0){
+    return true} else { return false}
+}
+
+function isPrime(num){
+  if(num<=2){
+    return false;
+  }
+  for(var i = 2; i<num; i++){
+    if(num % i === 0){
+    return false
+    }
+  }
+  return true
+}

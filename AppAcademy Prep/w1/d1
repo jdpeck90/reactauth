@@ -1,0 +1,67 @@
+/*
+yell("I want to go to the store")
+"I WANT TO GO TO THE STORE!!!"
+
+> yell("Time to program")
+"TIME TO PROGRAM!!!"
+*/
+
+function plusFive(num){
+result = num + 5;
+  return result;}
+
+function threeOrSeven(num){
+  if(num%7===0 || num%3===0){
+    return true;
+  }else {
+    return false;
+  }
+}
+
+function hello(str){
+  return "Hello, " + str;
+}
+
+function yell(str){
+  var yell = str.toUpperCase();
+  return yell +"!!!";
+}
+
+function whisper(str){
+  var whisper = str.toLowerCase();
+  return "..." + whisper + "...";}
+
+
+ /* isSubstring("The cat went to the store", "he cat went")
+true
+
+> isSubstring("Time to program", "time")
+true
+
+> isSubstring("Jump for joy", "joys")
+false */
+
+function isSubstring(str,subString){
+  var sameCaseStr = str.toLowerCase()
+  var sameCaseSubStr = subString.toLowerCase()
+  if(sameCaseStr.indexOf(sameCaseSubStr) !== -1){
+    return true;
+  } else {
+    return false;
+  }
+  }
+
+function isOdd(num){
+  result = num % 2 !== 0
+  return result
+}
+
+function isEven(num){
+  if(isOdd(num)){
+    return false;
+  } else {
+    return true;
+  }
+}
+
+isEven(8)

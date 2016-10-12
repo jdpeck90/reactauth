@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+    <style>
+        header {
+            text-align: center;
+            background: url('https://meganmoo612.files.wordpress.com/2015/01/freemont-bridge-portland-oregon.jpg');
+            background-size: cover;
+            color: white;
+        }
+
+        a {
+            color: white;
+        }
+        a:link {
+            color: red;
+            }
+        a:visited {
+            color: green;
+          }
+        a:hover {
+            color: green;
+          }
+        h1 {
+            font-size: 60px;
+            font-family: 'Rokkitt', serif;
+            margin:
+        }
+
+        h2 {
+            font-family: 'Rokkitt', serif;
+        }
+
+        p {
+            font-family: 'Rokkitt', serif;
+        }
+
+        img {
+            margin: 60px 0px 0px 0px;
+            border: 3px solid rgba(211,211,211, 0.8);
+            border-radius: 80px;
+            border-style: solid;
+        }
+
+        ul {
+            padding: 5px;
+
+        }
+        .ulheader {
+          background: rgba(0, 0, 0, 0.5);
+        }
+        li {
+            display: inline;
+            padding: 0px 10px 0px 10px;
+            font-family: 'Rokkitt', serif;
+        }
+
+        article {
+            max-width: 500px;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        #contact {
+            margin: -10px 0 10px 0;
+        }
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 36px;
+                padding: 5px;
+            }
+            li {
+                padding: 5px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZbAAAAJDJiNzE2NjdhLWIyMGYtNDc2NC1hZTNiLWE5Yzc2OTRiZjhiZQ.jpg"; style="height: 150px;width: 150px;">
+        <h1>Justin's Personal Page</h1>
+        <ul class="ulheader">
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">My Projects</a></li>
+            <li><a href="#">My Resume</a></li>
+        </ul>
+    </header>
+    <article>
+
+        <h2>About Me</h2>
+
+        <p>My name is Jusitn Peck and I am from Portland Oregon. For the last 4 years I have been pursueing a career in the apparel industry. My long term goals in learning to code is to bring efficiencies to the apparel industry and international sourcing applications. In the mean time, here are some of the things I have learned during my studies.</p>
+
+
+          <h3>Below is a recent Javascript project I have been working on.</h3>
+          <p><b>Pig Latin Translator:</b> What would you like me to translate?</p>
+
+        <input type="text" id="myText" value="Type text here...">
+        <button onclick="inPigLatin()">Try it</button>
+
+        <p id="pigLatinOutPut"></p>
+
+        <h4>Contact Information:</h4>
+        <p id="contact"><ul>
+                <li><b>--Email:</b><a href="mailto:jdpeck90@gmail.com"> jdpeck90@gmail.com</a> </li>
+                <li>--Phone Number: 503-989-6178</li>
+
+            </ul>
+        </p>
+
+    <script>
+    function myForEach(array, cb) {
+      for (var i = 0; i < array.length; i++){
+        cb(array[i], i, array);
+      }
+    }
+
+    function isVowel(letter) {
+      var vowels = ["a", "e", "i", "o", "u"];
+      return vowels.indexOf(letter) !== -1;
+    }
+
+
+    function wordInPigLatin(word) {
+      var vowels = ["a", "e", "i", "o", "u"];
+      var firstLetter = word[0];
+      if (isVowel(firstLetter)) {
+        return word + "yay";
+      } else {
+        for (var i = 0; i < word.length; i++){
+          var letter = word[i];
+          if (isVowel(letter)) {
+            var firstHalf = word.slice(0, i);
+            var lastHalf = word.slice(i);
+            return lastHalf + firstHalf + "ay";
+          }
+        }
+        return word + "ay";
+      }
+    }
+
+    function inPigLatin(sentence) {
+      var sentence = document.getElementById("myText").value;
+      var seperatedSentence = sentence.split(" ");
+      var selection = [];
+
+    myForEach(seperatedSentence, function (word) {
+      var pigLatinWord = wordInPigLatin(word);
+      selection.push(pigLatinWord)
+    })
+
+     document.getElementById("pigLatinOutPut").innerHTML = selection.join(" ");
+    }
+    </script>
+</body>

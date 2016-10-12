@@ -1,0 +1,13 @@
+function divisibleByThreePairSum(array){
+  var selected = [];
+  for(var i =0; i<array.length; i++){
+    var ele1 = array[i];
+    for(var j = i+1; j<array.length; j++){
+      var ele2 = array[j];
+      if ((ele1+ele2) % 3 ===0){
+        selected.push([i,j]);
+      }
+    }
+  }
+  return selected;
+}

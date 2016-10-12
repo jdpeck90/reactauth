@@ -1,0 +1,22 @@
+Your style needs work. Look at code 
+from gitHub and on the internet if 
+you need a reference. There's a wealth 
+of information at your disposal, just 
+search for it.
+
+For arraySumN, please watch the solution 
+video. You should make a function that
+returns the sum of an array.
+
+then you can type this:
+
+for (var i in outerArray){
+    var inner = outerArray[i];
+
+    if (arrSum(inner) == n){
+        someArray.push(inner);
+    }
+}
+
+- Joseph Burger
+

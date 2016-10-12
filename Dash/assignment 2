@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <style>
+        header {
+            text-align: center;
+            background: url('http://dash.ga.co/assets/jeff-bg.png');
+            background-size: cover;
+            color: white;
+        }
+
+        a {
+            color: white;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        h2 {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        p {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .mainpic {
+            margin: 40px 0px 0px 0px;
+            border: 7px solid white;
+            border-radius: 20px;
+            border-style: inset outset;
+        }
+
+        ul {
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        li {
+            display: inline;
+            padding: 0px 10px 0px 10px;
+            font-family: 'Ubuntu', sans-serif;
+            color: white;
+            margin: 0 auto;
+        }
+
+        article {
+            max-width: 500px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        #comment {
+            width: 500px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-top: -15px;
+        }
+
+        #readmore {
+            color: red;
+        }
+        .rightmenu {
+          margin: 150px 0 0 20px;
+          padding: 0 0 0 0px;
+        }
+
+        .leftmenu {
+          margin: 150px 20px 0 0px;
+          padding: 0 0 0 0px;
+        }
+        #rightlink {
+          margin-right: 35px;
+        }
+        #leftlink {
+          margin-left: 35px;
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 36px;
+                padding: 5px;
+            }
+            li {
+                padding: 5px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class ="mainpic" src="/assets/jeff.png">
+        <h1>Justin's Fake Blog</h1>
+        <ul>
+            <li class=><a href="#"><img src="http://vignette2.wikia.nocookie.net/drunken-peasants-podcast/images/e/e0/Tumblr_icon.png" alt="Justin's Fake Blog Tumblr" height="20" width="20"></a></li>
+            <li class="leftmenu"><a href="#"><img src="https://qph.ec.quoracdn.net/main-qimg-d5b5630afdc1a46911cdccf5b0892cd3?convert_to_webp=true" alt="Justin's Fake Blog Instagram" height="23" width="23"></a></li>
+            <li><a id="leftlink" href="#">About Me</a></li>
+            <li><a href="#">Best Poems</a></li>
+            <li><a id="rightlink" href="#">Worst Poems</a></li>
+            <li class="rightmenu"><a href="#"><img src="http://vignette2.wikia.nocookie.net/warframe/images/f/f9/Facebook-logo-icon-vectorcopy-big_copy.png" alt="Justin's Fake Blog Facebook" height="20" width="20"></a></li>
+            <li class=><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Twitter_icon.png" alt="Justin's Fake Blog Twitter" height="20" width="20"></a></li>
+        </ul>
+    </header>
+    <article>
+
+        <h2>Turpis nec semper volutpat, nisl tortor</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dui elit, finibus ut finibus ut, mattis vel ex. Morbi odio metus, porttitor et enim eu, malesuada iaculis sapien. Curabitur vitae malesuada diam. Suspendisse eu nulla et lorem volutpat
+            pulvinar. Sed eu blandit orci. Maecenas ut risus nec quam convallis imperdiet nec vel sem <a href="#" id="readmore">.....Read More</a></p>
+        <p>Comments:</p>
+        <textarea id='comment' placeholder='Write your comments in here...'></textarea><br />
+    </article>
+    <article>
+        <h2>Vivamus porta nisl mi sed tinciduntmi</h2>
+        <p>Proin consectetur metus et nisl auctor, vel dignissim tellus luctus. Sed egestas augue sit amet nibh elementum efficitur. Integer tristique, turpis nec semper volutpat, nisl tortor ultrices eros, in semper velit urna ut nibh. Nulla fermentum tristique
+            orci in fringilla. Suspendisse viverra consectetur pharetra <a href="#" id="readmore">.....Read More</a></p>
+        <p>Comments:</p>
+        <textarea id='comment' placeholder='Write your comments in here...'></textarea><br />
+    </article>
+    <article>
+        <h2>Donec consequat magna ut eleifend velit</h2>
+        <p>Maecenas sit amet feugiat nulla. Curabitur nec pellentesque mauris, sit amet sagittis enim. Donec et neque id neque feugiat hendrerit quis quis magna. Nulla eu mauris est. Praesent et dapibus felis, ut posuere tellus. Integer aliquet at justo
+            a dictum. Donec quam sapien, tincidunt nec velit vel, sollicitudin bibendum dolor <a href="#" id="readmore">.....Read More</a></p>
+
+        <p>Comments:</p>
+        <textarea id='comment' placeholder='Write your comments in here...'></textarea><br />
+    </article>
+    <script>
+        $("button").on("click", function() {
+            alert("Clicked!");
+        });
+    </script>
+</body>
