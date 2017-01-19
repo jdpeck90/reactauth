@@ -7,7 +7,7 @@ class LoginForm extends Component {
     return (
       <Card>
         <CardSection>
-            <TextInput />
+            <TextInput style={{ height: 20, width: 100 }} />
         </CardSection>
         <CardSection />
 
