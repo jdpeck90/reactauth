@@ -31,7 +31,6 @@ class LoginForm extends Component {
       loading: false,
       error: ''
     });
-
   }
 
 
@@ -54,7 +53,7 @@ class LoginForm extends Component {
             <Input
             placeholder="user@gmail.com"
             label="Email"
-            value={this.state.text}
+            value={this.state.email}
             onChangeText={email => this.setState({ email })}
             />
         </CardSection>
