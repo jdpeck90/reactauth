@@ -13,6 +13,13 @@ class App extends Component {
     storageBucket: 'auth-reactnative-29a96.appspot.com',
     messagingSenderId: '398858069094'
   });
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ loggedIn: true });
+      } else {
+        this.setState({ loggedIn: false });
+      }
+    });
   }
 
   render() {
