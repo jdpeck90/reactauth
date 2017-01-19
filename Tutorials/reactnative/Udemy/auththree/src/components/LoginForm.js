@@ -21,10 +21,12 @@ class LoginForm extends Component {
       }
 
   onLoginFail() {
+    console.log('fail');
     this.setState({ error: 'Authentication Failed.', loading: false });
   }
 
   onLoginSuccess() {
+    console.log('success')
     this.setState({
       email: '',
       password: '',

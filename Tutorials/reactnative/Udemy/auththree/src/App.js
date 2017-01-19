@@ -5,7 +5,7 @@ import { Header, Button, Spinner } from './components/common/Index';
 import LoginForm from './components/LoginForm';
 
 class App extends Component {
-  state = { loggedIn: true }
+  state = { loggedIn: null }
 
   componentWillMount() {
     firebase.initializeApp({
@@ -29,14 +29,14 @@ class App extends Component {
     switch (this.state.loggedIn) {
       case true:
         return (
-         <Button onPress={() => firebase.auth.signOut}>
+         <Button onPress={() => firebase.auth().signOut()}>
          Log Out
          </Button>
          );
       case false:
         return <LoginForm />;
       default:
-        return <Spinner size="large" />;
+        return <View><Spinner size="large" /></View>;
     }
   }
 
@@ -44,7 +44,7 @@ class App extends Component {
     return (
     <View>
       <Header headerText="Authentication" />
-      <LoginForm />
+      {this.renderContent()}
       </View>
     );
   }
