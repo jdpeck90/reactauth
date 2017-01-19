@@ -1,0 +1,3 @@
+rootProject.name = 'auththree'
+
+include ':app'
